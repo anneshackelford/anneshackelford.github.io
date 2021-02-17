@@ -60,6 +60,14 @@ https://coolors.co/cb997e-eddcd2-fff1e6-f0efeb-ddbea9-a5a58d-b7b7a4
 
 /* Global styles
 --------------------------------*/
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 body {
   color: var(--oxford-blue);
   margin: 0;
@@ -91,9 +99,26 @@ h2 {
   margin: 0;
 }
 .content-wrap {
-  width: 800px;
+  max-width: 800px;
+  width: 85%;
   margin: 0 auto;
   padding: 60px 0;
+}
+h3 {
+  margin-bottom: 0;
+}
+.item-details h3 + p {
+  font-style: italic;
+}
+.item-details h3 ~ p {
+  margin: 0;
+}
+.divider > section {
+  border-bottom: 1px dashed var(--dark-slate-gray);
+  padding: 25px 0;
+}
+.divider > section:last-of-type {
+  border-bottom: none;
 }
 
 /* Profile
@@ -121,11 +146,26 @@ header {
 .projects .btn:hover {
   background-color: hsla(180, 25%, 25%, 80%);
 }
+.project-item {
+  overflow: hidden;
+}
+.project-item img {
+  float: left;
+  margin-right: 20px;
+}
+.project-item h3 {
+  margin-top: 0;
+}
 
 /* Work Experience
 --------------------------------*/
 .work-experience {
   background-color: var(--light-gray);
+}
+.job-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 20px;
 }
 
 /* Education
@@ -136,8 +176,16 @@ header {
 footer {
   background-color: var(--independence);
   color: white;
+  text-align: center;
 }
-
-.contact-info-links a {
+.contact-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.contact-list a {
+  padding: 15px;
+  display: inline-block;
   color: var(--bone);
 }
