@@ -228,14 +228,6 @@ footer {
     and (device-height: 926px) 
     and (-webkit-device-pixel-ratio: 3) { 
   h1 {
-    font-size: 45px;
-    line-height: 0.9;
-    margin-bottom: 20px;
-  }
-  h2 {
-    line-height: 1;
-  }
-  .contact-list a {
-    padding: 5px;
-    }
+    font-size: 8px;
+      }
 }
