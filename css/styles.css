@@ -64,10 +64,11 @@ html {
   box-sizing: border-box;
 }
 *,
-*::before,
-*::after {
+*:before,
+*:after {
   box-sizing: inherit;
 }
+
 body {
   color: var(--oxford-blue);
   margin: 0;
@@ -149,10 +150,6 @@ header {
 .project-item {
   overflow: hidden;
 }
-.project-item img {
-  float: left;
-  margin-right: 20px;
-}
 .project-item h3 {
   margin-top: 0;
 }
@@ -162,30 +159,65 @@ header {
 .work-experience {
   background-color: var(--light-gray);
 }
-.job-item {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  column-gap: 20px;
-}
 
 /* Education
 --------------------------------*/
+.education {
+  /* background-image: url("https://picsum.photos/id/1073/600/400?blur"); */
+  background-image: url("https://picsum.photos/id/1073/600/400?blur=8");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: var(--oxford-blue);
+}
 
 /* Contact Info
 --------------------------------*/
 footer {
   background-color: var(--independence);
   color: white;
-  text-align: center;
 }
 .contact-list {
   list-style-type: none;
   padding: 0;
-  display: flex;
-  justify-content: center;
 }
 .contact-list a {
   padding: 15px;
   display: inline-block;
   color: var(--bone);
+}
+
+/* Responsive
+--------------------------------*/
+@media screen and (min-width: 750px) {
+  footer {
+    text-align: center;
+  }
+  .project-item img {
+    float: left;
+    margin-right: 20px;
+  }
+
+  .job-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
+  }
+  .contact-list {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 749px) {
+  h1 {
+    font-size: 45px;
+    line-height: 0.9;
+    margin-bottom: 20px;
+  }
+  h2 {
+    line-height: 1;
+  }
+  .contact-list a {
+    padding: 5px;
+  }
 }
