@@ -228,6 +228,6 @@ footer {
     and (device-height: 926px) 
     and (-webkit-device-pixel-ratio: 3) { 
   h1 {
-    font-size: 8px;
+    font-size: 200px;
       }
 }
