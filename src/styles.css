@@ -1,0 +1,936 @@
+:root {
+  --green-green-beige: #9fa8a3;
+  --green-beige: #c5d5cb;
+  --beige: #e3e0cf;
+}
+
+/* Global styles
+--------------------------------*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  /* font-family: "Shippori Mincho", serif; */
+  /* font-family: 'Roboto', sans-serif; */
+  /* font-family: "Montserrat", sans-serif; */
+  /* font-family: 'Source Sans Pro', sans-serif;   */
+  /* font-family: "Lato", sans-serif; */
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Raleway", sans-serif;
+  /* font-family: 'Architects Daughter', cursive; */
+  font-size: 1em;
+
+  /* the contact page had no scroll bar so the menus would move when navigating there */
+  overflow-y: scroll; 
+
+  /* zoomed image makes horizontal scrollbar appear and not needed */
+  overflow-x: hidden;
+  
+}
+@media screen and (min-width: 735px) {
+  body {
+    font-size: 1.3em;
+  }
+}
+@media screen and (min-width: 1300px) {
+  body {
+    font-size: 1.5em;
+  }
+}
+
+ul {
+  list-style-type: circle;
+}
+
+/* Background
+---------------------------*/
+.page {
+  background-color: lightgray;
+}
+
+/* Banner Image
+--------------------------------*/
+.bannerImage {
+  min-height: 380px;
+}
+
+/* .bannerImage.container { */
+.container.withBanner {
+  position: absolute;
+  margin: 2%;
+  width: 90%;
+}
+
+.container.withoutBanner {
+  /* position: absolute; */
+  margin: 2%;
+  width: 90%;
+}
+
+.gradient img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 660px;
+  object-fit: cover;
+  object-position: center;
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+  transition: 0.5s ease;
+}
+
+.gradient img.smaller {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 660px;
+  object-fit: cover;
+  object-position: center;
+  transform: translate3d(0px, 0px, 0px) scale3d(1.05, 1.05, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+}
+
+.gradient::after {
+  display: block;
+  position: relative;
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0), white);
+  margin-top: -660px;
+  height: 660px;
+  width: 100%;
+  content: "";
+}
+
+/* Header Menu - Horizontal
+-------------------------------*/
+
+.topnav {
+  overflow: hidden;
+  position: relative;
+  color: black;
+  top: 0;
+  margin: 0 auto;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto;
+}
+
+/* name section */
+.topnav .left {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+/* horizontal menu */
+.topnav .right {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  background-color: inherit;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+
+/* links in horizontal menu */
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+/* links in horizontal menu hover */
+.topnav a:hover {
+  background-color: var(--green-beige);
+  color: black;
+}
+
+/* hamburger is not displayed when not on responsive narrow screen */
+.topnav .hamburger {
+  display: none;
+}
+
+/* hide the menu and display the hamburger in responsive */
+@media screen and (max-width: 900px) {
+  .topnav .right a {
+    display: none;
+  }
+  .topnav .hamburger {
+    float: right;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1em;
+  }
+  .topnav .hamburger:hover {
+    background-color: var(--green-beige);
+    color: black;
+  }
+}
+
+/* Header Menu - Inside Page Menu
+-----------------------------------*/
+
+.pageMenu {
+  visibility: none;
+  opacity: 0;
+  background-color: var(--green-green-beige);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content auto;
+}
+
+.pageMenu.visible {
+  visibility: visible;
+  opacity: 1;
+  z-index: 2;
+}
+
+.pageMenu ul {
+  list-style-image: none;
+  list-style-type: none;
+  list-style-position: outside;
+  padding-inline-start: 0px;
+}
+
+.pageMenu li {
+  text-align: center;
+  font-size: 2em;
+  padding: 1%;
+  color: white;
+}
+
+.pageMenu li a {
+  text-decoration: none;
+  color: white;
+  padding-bottom: 10px;
+}
+
+/* animated line under menu item on focus */
+.pageMenu li a:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 2px;
+  width: 0px;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+/* animated line under menu item on focus */
+.pageMenu li a:hover:after {
+  width: 33%;
+  background: white;
+}
+
+.pageMenu .closeMenu {
+  color: white;
+  padding: 14px 16px;
+  margin-top: 2%;
+  margin-left: 2%;
+  justify-self: start;
+  font-size: 1.5em;
+}
+
+.pageMenu .closeMenu:hover {
+  background-color: white;
+  color: var(--green-green-beige);
+  cursor: pointer;
+}
+
+/* Footer Menu for Scrill to Top
+---------------------------------*/
+.footerMenu {
+  position: fixed;
+  z-index: 1;
+  cursor: pointer;
+  bottom: 30px;
+  right: 10px;
+}
+
+.footerMenu #scrollToTopIcon {
+  font-size: 1.5em;
+  display: none; /* hidden on first page */
+  color: gray;
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 0;
+}
+
+/* increase icon size on hover with transition on font size */
+.footerMenu #scrollToTopIcon:hover {
+  font-size: 2em;
+  transition: ease-in;
+}
+
+/* Content
+---------------------------*/
+
+.content {
+  background-color: white;
+  display: flex;
+  width: 95%;
+  margin: 0 auto;
+  align-items: center;
+  flex-direction: column;
+  align-content: stretch;
+  margin-top: 1%;
+}
+
+@media screen and (min-width: 1300px) {
+  .content {
+    width: 80%;
+  }
+}
+
+/* Section Bar
+---------------------------*/
+.sectionBar {
+  font-size: 2em;
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+  color: var(--green-green-beige);
+  background-color: white;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 40px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 2%;
+  margin-left: 0px;
+}
+
+#projects.sectionBar {
+  margin-bottom: 6%;
+}
+
+@media screen and (min-width: 735px) {
+  .sectionBar {
+    font-size: 2.5em;
+  }
+}
+@media screen and (min-width: 1070px) {
+  .sectionBar {
+    font-size: 3em;
+  }
+}
+
+/* Introduction
+---------------------------*/
+.introduction {
+  background-color: var(--green-green-beige);
+  color: white;
+  font-size: 1.5em;
+  margin-left: 5%;
+  margin-right: 15%;
+  text-align: left;
+  margin-top: 200px;
+  max-width: 500px;
+
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.introduction .name {
+  letter-spacing: 0.3em;
+  font-family: "Roboto", sans-serif;
+}
+
+.introduction img {
+  margin: 0 auto;
+}
+
+.introduction .summary {
+  padding: 20px;
+}
+
+/* Projects 
+---------------------------*/
+
+.featureList {
+  background-image: url("./images/green_white_fog_compressed_moz.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 4% 0;
+  width: 100%;
+  padding-top: 20px;
+  padding-right: 40px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+.featureList h1 {
+  padding: 20px;
+}
+
+.featureList img {
+  width: 100%;
+}
+
+.featureList .imageAndIntro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+}
+
+.feature {
+  background-color: white;
+  padding: 10px;
+  border-radius: 9px;
+  color: var(--green-green-beige);
+}
+
+.done {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+@media screen and (max-width: 650px) {
+  .featureList .imageAndIntro {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .done {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .done {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Blog Chevron
+------------------------------*/
+
+.blogs .oneBlog .chevron {
+  margin-right: 2.6%;
+  padding-top: 35px;
+  margin-bottom: -119px;
+  text-align: right;
+}
+
+.blogs .oneBlog i:first-of-type {
+  padding: 20px;
+  color: black;
+  background-color: inherit;
+}
+
+.blogs .oneBlog i:first-of-type:hover {
+  color: var(--beige);
+  background-color: var(--green-green-beige);
+}
+
+@media screen and (hover: none) {
+  .blogs .oneBlog i:first-of-type:hover {
+    color: black;
+    background-color: inherit;
+  }
+}
+
+/* Blogs 
+---------------------------*/
+
+.blogs img {
+  width: 600px;
+  max-width: 100%;
+  padding: 15px;
+  display: block;
+  margin: 0 auto;
+}
+
+.blogs .oneBlog p:first-of-type img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  padding: 0px;
+  padding-bottom: 20px;
+}
+
+.blogs .oneBlog h1:first-of-type {
+  padding-bottom: 30px;
+  margin-bottom: 0;
+  margin-right: 8%;
+}
+
+.blogs .oneBlog p:first-of-type {
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  margin-top: 0;
+}
+
+.blogs .oneBlog {
+  background-image: url("./images/beige_white_fog_compressed_moz.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 4% 0;
+}
+
+.blogs .oneBlog p:not(:first-of-type),
+.blogs .oneBlog h1:not(:first-of-type),
+.blogs .oneBlog h2,
+.blogs .oneBlog h3,
+.blogs .oneBlog table {
+  display: none;
+}
+
+.blogs .oneBlog p.show:not(:first-of-type),
+.blogs .oneBlog h1.show:not(:first-of-type),
+.blogs .oneBlog h2.show,
+.blogs .oneBlog h3.show,
+.blogs .oneBlog table.show {
+  display: block;
+}
+
+.blogs .oneBlog thead,
+.blogs .oneBlog tr,
+.blogs .oneBlog tbody,
+.blogs .oneBlog th,
+.blogs .oneBlog td {
+  display: none;
+}
+
+.blogs .oneBlog thead.show {
+  display: table-header-group;
+}
+
+.blogs .oneBlog tr.show {
+  display: table-row;
+}
+
+.blogs .oneBlog tbody.show {
+  display: table-row-group;
+}
+
+.blogs .oneBlog th.show,
+.blogs .oneBlog td.show {
+  display: table-cell;
+}
+
+.blogs .oneBlog li {
+  display: none;
+}
+
+.blogs .oneBlog li.show {
+  display: list-item;
+}
+
+.blogs a,
+.portfolio a {
+  color: #5e7668;
+}
+
+.blogs p {
+  padding-top: 10px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  text-align: justify;
+}
+
+.blogs p:last-of-type {
+  padding-bottom: 35px;
+}
+
+.blogs h1,
+.portfolio h1 {
+  padding-top: 35px;
+  padding-bottom: 0;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.blogs h2,
+.portfolio h2 {
+  padding-top: 35px;
+  padding-bottom: 0;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.blogs h3,
+.blogs h4,
+.blogs h5,
+.blogs h6,
+.portfolio h3,
+.portfolio h4,
+.portfolio h5,
+.portfolio h6 {
+  padding-top: 20px;
+  padding-bottom: 0;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.blogs h6:last-child {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.blogs li,
+.portfolio li {
+  padding-bottom: 10px;
+  padding-right: 20px;
+}
+
+.blogs hr {
+  width: 50%;
+  text-align: left;
+  margin-left: 2%;
+}
+
+.blogs table {
+  border-collapse: collapse;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+
+.blogs th,
+.blogs td {
+  text-align: left;
+  padding: 8px;
+}
+
+.blogs tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.blogs tr:last-child {
+  background-color: #f2f2f2;
+  border-bottom: solid thin var(--green-green-beige);
+}
+
+.blogs th {
+  background-color: var(--green-green-beige);
+  color: white;
+}
+
+.blogs tbody {
+  border-bottom: solid thin #f2f2f2;
+}
+
+.blogs pre {
+  padding: 20px;
+}
+
+.blogs code {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #f2f2f2;
+}
+
+.blogs blockquote {
+  border-left: solid thick var(--green-beige);
+}
+
+.blogs ul:last-child {
+  padding-bottom: 30px;
+}
+
+/* Blog Downlink
+---------------------------*/
+
+.blogs .downloadLink {
+  text-align: right;
+  padding: 20px;
+  margin-top: -108px;
+  display: none;
+}
+
+@media screen and (hover: hover) {
+  .blogs .oneBlog .downloadLink.show {
+    display: block;
+  }
+}
+
+.blogs .oneBlog .downloadLink i.fas.fa-download {
+  font-size: 1em;
+  color: gray;
+}
+
+/* Blog Overlay
+--------------------------------*/
+
+.overlay {
+  position: absolute;
+  width: 95%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: var(--beige);
+}
+
+/* The overlay isn't needed anymore because of the notFocused.
+All opacity for the overlay have been removed in the css.
+The code needs to be adapted before removing the rest of the overlay css
+because it breaks otherwise */
+
+@media screen and (hover: hover) {
+  .blogs .oneBlog.notFocused {
+    opacity: 0.2;
+    transition: 1s ease;
+  }
+  .blogs .oneBlog.focused {
+    opacity: 1;
+    transition: 1s ease;
+  }
+}
+
+/* .blogs .oneBlog:hover .overlay.hide {
+  opacity: 0;
+}
+
+.blogs .oneBlog:hover .overlay {
+  opacity: 1;
+} */
+
+.overlayText {
+  color: var(--green-green-beige);
+  font-size: 1.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 1300px) {
+  .overlay {
+    width: 80%;
+  }
+}
+
+@media screen and (hover: none) {
+  .blogs .oneBlog:hover .overlay {
+    opacity: 0;
+  }
+}
+
+/* About
+---------------------------*/
+
+.headerImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about {
+  background-image: url("./images/green_white_fog_compressed_moz.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  margin: 4% 0;
+  width: 100%;
+}
+
+.about .image {
+  background-image: url("https://picsum.photos/1024/200?random=100");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 200px;
+}
+
+.about .details {
+  padding-top: 20px;
+  padding-right: 40px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+.aboutMindMap .details {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.aboutMindMap .details div {
+  flex: 1 100%;
+}
+
+.aboutMindMap .details .detailsFlexItem {
+  padding-right: 10px;
+}
+
+.aboutTitle {
+  font-size: 1.5em;
+  padding: 20px;
+}
+
+.about h1 {
+  padding: 20px;
+}
+
+.aboutMindMap .title {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutMindMap .title h3 {
+  margin-bottom: 0;
+}
+
+.aboutMindMap .line {
+  width: 200px;
+  margin-left: -1%;
+}
+
+@media screen and (min-width: 600px) {
+  .aboutMindMap .details div {
+    flex: 1 50%;
+  }
+  .aboutMindMap .details div p {
+    padding-right: 15px;
+  }
+}
+
+@media screen and (min-width: 1070px) {
+  .aboutMindMap .details div {
+    flex: 1 33%;
+  }
+}
+
+/* Contact
+---------------------------*/
+
+.contact {
+  background-image: url("./images/green_beige_fog_compressed_moz.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  margin: 4% 0;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+}
+
+.contact img {
+  margin: 2%;
+  width: 100px;
+  border-radius: 50px;
+}
+
+.iconGroup {
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 1em;
+}
+
+.contact a {
+  padding: 5px 15px;
+  color: white;
+}
+
+.contact a:hover {
+  background-color: white;
+  color: var(--green-green-beige);
+}
+
+/* Version History
+---------------------------*/
+
+.versionHistory {
+  background-image: url("./images/beige_white_fog_compressed_moz.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: darkgray;
+  color: black;
+  width: 100%;
+  font-size: 0.7em;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-bottom: 2%;
+  padding-bottom: 20px;
+}
+
+.versionHistory details[open] summary ~ * {
+  animation: sweep 0.5s ease-in-out;
+}
+
+@keyframes sweep {
+  0% {
+    opacity: 0;
+    margin-left: -1%;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0px;
+  }
+}
+
+.versionHistory details:not(:first-child) {
+  padding-bottom: 0px;
+  padding-bottom: 10px;
+}
+
+.versionHistory .line:not(:first-child) {
+  padding-top: 20px;
+  margin: 0;
+}
+
+.versionHistory details summary {
+  outline: none;
+  cursor: pointer;
+}
+
+.versionHistory .lastUpdated {
+  padding: 20px 0;
+}
