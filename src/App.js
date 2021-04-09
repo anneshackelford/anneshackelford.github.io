@@ -7,13 +7,12 @@ import Home from "./components/Home";
 import useFeatureList from "./requests/useFeatureList";
 
 function App() {
-  const [featureList, error] = useFeatureList();
+  // const [featureList, error] = useFeatureList();
+  const error = null;
+  const featureList = [];
 
   return (
     <Router>
-      {error != null ? (
-        <p>Error fetching feature list: {error}</p>
-      ) : (
         <Switch>
           <Route
             path="/projects"
@@ -45,7 +44,6 @@ function App() {
             )}
           />
         </Switch>
-      )}
     </Router>
   );
 }
