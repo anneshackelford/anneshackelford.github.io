@@ -15,7 +15,7 @@ function AboutMindMap({ name }) {
           <div className="detailsFlexItem">
             <div className="title">
               <h3>Who Am I?</h3>
-              <img className="line" src={line} alt="Line" />
+              <img className="line" src={line} alt="Line" height="25w" width="246w" />
             </div>
             <p>
               Hello! I am Anne Shackelford - a Frontend Web Developer and Scrum
@@ -27,7 +27,7 @@ function AboutMindMap({ name }) {
           <div className="detailsFlexItem">
             <div className="title">
               <h3>What Have I Done?</h3>
-              <img className="line" src={line} alt="Line" />
+              <img className="line" src={line} alt="Line" height="25w" width="246w" />
             </div>
             <p>
               My first significant project started around 2001 when I designed
@@ -48,7 +48,7 @@ function AboutMindMap({ name }) {
           <div className="detailsFlexItem">
             <div className="title">
               <h3>What is my Expertise?</h3>
-              <img className="line" src={line} alt="Line" />
+              <img className="line" src={line} alt="Line" height="25w" width="246w" />
             </div>
             <p>
               I developped an expertise in the use of React.js, CSS, JavaScript,
@@ -64,7 +64,7 @@ function AboutMindMap({ name }) {
           <div className="detailsFlexItem">
             <div className="title">
               <h3>What is my Education?</h3>
-              <img className="line" src={line} alt="Line" />
+              <img className="line" src={line} alt="Line"  height="25w" width="246w"/>
             </div>
             <p>
               I have a Masters in Computer Science with a specialization in
@@ -78,7 +78,7 @@ function AboutMindMap({ name }) {
           <div className="detailsFlexItem">
             <div className="title">
               <h3>What is my Professional Project?</h3>
-              <img className="line" src={line} alt="Line" />
+              <img className="line" src={line} alt="Line"  height="25w" width="246w"/>
             </div>
             <p>
               Today I am looking for a new challenge in Frontend Web Development
@@ -88,7 +88,7 @@ function AboutMindMap({ name }) {
           <div className="detailsFlexItem">
             <div className="title">
               <h3>What else Interests me?</h3>
-              <img className="line" src={line} alt="Line" />
+              <img className="line" src={line} alt="Line" height="25w" width="246w" />
             </div>
             <p>
               Other than Frontend Development interests, I am interested in a

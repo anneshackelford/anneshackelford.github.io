@@ -52,7 +52,7 @@ class VersionHistory extends Component {
             <b>{firstPost ? firstPost.split('\n')[0] : null}</b>
           </summary>
           <ReactMarkdown plugins={[gfm]} source={firstPost ? (firstPost.slice(firstPost.indexOf('\n') + 1)) : null} />
-          <img className="line" src={line} alt="Line" />
+          <img className="line" src={line} alt="Line"  height="25w" width="246w"/>
           <h3>Previous Versions</h3>
           <div>
             {remainingPosts ? remainingPosts.map((post, idx) => (

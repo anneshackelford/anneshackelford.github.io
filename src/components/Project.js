@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ScrollAnimation from "react-animate-on-scroll";
-import phoneAndComputer from "../images/PC-and-phone-compressed-moz.jpg";
+// import phoneAndComputer from "../images/PC-and-phone-compressed-moz.jpg";
+import phoneAndComputer from "../images/PC-and-phone-compressed-moz-small 400w 262h.jpg"
 import projectPortfolio from "../markdown/projectPosts/projectPortfolio.md";
 import ReactMarkdown from "react-markdown";
 import SectionBar from "./SectionBar";
@@ -41,6 +42,7 @@ function Project({ featureList }) {
               className="phoneAndComputer"
               src={phoneAndComputer}
               alt="phone and computer photos"
+              width="400px" height="262px"
             />
             <div className="details">
               <p>

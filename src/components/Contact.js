@@ -16,7 +16,7 @@ function Contact({ withBanner }) {
             <span id="contact"></span>
             <img src={profile} alt="Anne" />
             <div>Anne Shackelford</div>
-            <img className="line" src={line} alt="Anne" />
+            <img className="line" src={line} alt="Anne"  height="25w" width="246w" />
             <p className="title">Front-End Web Developer</p>
             <div className="iconGroup">
               <a
