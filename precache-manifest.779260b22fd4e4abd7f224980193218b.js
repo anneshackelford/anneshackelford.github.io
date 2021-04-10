@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "7bb25c98df66961439cb",
+    "revision": "5b00bf61fd9b38d1caa3",
     "url": "/static/css/main.dc53b8dd.chunk.css"
   },
   {
-    "revision": "7bb25c98df66961439cb",
-    "url": "/static/js/main.0ac349dc.chunk.js"
+    "revision": "5b00bf61fd9b38d1caa3",
+    "url": "/static/js/main.dbc03438.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -36,8 +36,8 @@ self.__precacheManifest = [
     "url": "/static/media/aboutMindMapHeader.90e49887.jpg"
   },
   {
-    "revision": "3278f73a1895765d82b7808bf294b27c",
-    "url": "/static/media/PC-and-phone-compressed-moz-small 400w 262h.3278f73a.jpg"
+    "revision": "44c8aa5d39df3a58b134bd69109170a7",
+    "url": "/static/media/PC-and-phone-compressed-moz.44c8aa5d.jpg"
   },
   {
     "revision": "70db8c8fe8e21121d6d9ff6863f55b68",
@@ -124,7 +124,7 @@ self.__precacheManifest = [
     "url": "/static/media/features_v0_16_0.52340fd4.md"
   },
   {
-    "revision": "dcdc6cc499401148461abfb76399b051",
+    "revision": "7abb7aa2eb12f3cbf90a1877b4254424",
     "url": "/index.html"
   }
 ];
