@@ -1,0 +1,18 @@
+.aboutMindMap-flexContainer {
+  background-image: url("../images/green_white_fog_compressed_moz.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  margin: 4% 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.aboutMindMap-flexItem {
+  flex: 1;
+  padding: 20px;
+  min-width: 300px;
+}

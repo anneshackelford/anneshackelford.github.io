@@ -10,7 +10,7 @@ function About({ withBanner }) {
       <Navigation withBanner={withBanner}/>
       <div id="content" className="content">
       <SectionBar id="about" title="About Me" />
-      <AboutCareer />
+      {/* <AboutCareer /> */}
       <AboutMindMap />
     </div>
     </div>
