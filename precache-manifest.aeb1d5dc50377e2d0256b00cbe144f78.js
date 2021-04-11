@@ -124,7 +124,7 @@ self.__precacheManifest = [
     "url": "/static/media/features_v0_16_0.52340fd4.md"
   },
   {
-    "revision": "806825ca9c2c017741a3e1ce455bb6b1",
+    "revision": "f2e230365ae78acef2add7e93b19d2ea",
     "url": "/index.html"
   }
 ];
