@@ -1,23 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "c9116aa644cd0af872e5",
-    "url": "/static/css/main.af619d12.chunk.css"
+    "revision": "ee9fe567dc21ecda0a14",
+    "url": "/static/css/main.4ee03c4c.chunk.css"
   },
   {
-    "revision": "c9116aa644cd0af872e5",
-    "url": "/static/js/main.d72fdb25.chunk.js"
+    "revision": "ee9fe567dc21ecda0a14",
+    "url": "/static/js/main.93b913fa.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "fa446d5d034711f8035a",
-    "url": "/static/js/2.3a05acfa.chunk.js"
-  },
-  {
-    "revision": "5ebfd9ac145e72b79aeac5df92728e0b",
-    "url": "/static/media/aboutCareer.5ebfd9ac.md"
+    "revision": "4cc4103958c1ff9e1c68",
+    "url": "/static/js/2.ed81a2ad.chunk.js"
   },
   {
     "revision": "44776652aed10d135b34ee42b22056d6",
@@ -32,12 +28,16 @@ self.__precacheManifest = [
     "url": "/static/media/messageOnPhoneDesignDevelop_medium_cropped_compressed_moz.f86ff498.jpg"
   },
   {
-    "revision": "70db8c8fe8e21121d6d9ff6863f55b68",
-    "url": "/static/media/projectPortfolio.70db8c8f.md"
+    "revision": "be986253e368fece161e20305b726286",
+    "url": "/static/media/projectPortfolio.be986253.md"
   },
   {
     "revision": "4c9b35fa9988743b5edb678e14ba806c",
     "url": "/static/media/projectIntroduction.4c9b35fa.md"
+  },
+  {
+    "revision": "e9d66998aa15e5828651920630cc9591",
+    "url": "/static/media/projectLibraries.e9d66998.md"
   },
   {
     "revision": "e7706305bead858ce332782541fcfb99",
@@ -52,12 +52,12 @@ self.__precacheManifest = [
     "url": "/static/media/blogResponsiveCSS.45ad20e3.md"
   },
   {
-    "revision": "905e95f66c4ddca8336c056e7b13a634",
-    "url": "/static/media/computerScreensAndPhone.905e95f6.jpg"
-  },
-  {
     "revision": "90e49887bc1ffe329d64088d3a7abd0c",
     "url": "/static/media/aboutMindMapHeader.90e49887.jpg"
+  },
+  {
+    "revision": "5ebfd9ac145e72b79aeac5df92728e0b",
+    "url": "/static/media/aboutCareer.5ebfd9ac.md"
   },
   {
     "revision": "c6d070c558c61321e34c419c0beb6701",
@@ -152,7 +152,7 @@ self.__precacheManifest = [
     "url": "/static/media/features_v0_16_0.52340fd4.md"
   },
   {
-    "revision": "63baf70136662523c2bb5368cb4d4ed4",
+    "revision": "6977badf75d80d6525c9ecb93f4958f8",
     "url": "/index.html"
   }
 ];
