@@ -1,0 +1,40 @@
+/* Contact
+---------------------------*/
+
+.contact {
+    background-image: url("../images/green_beige_fog_compressed_moz.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    margin: 4% 0;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+  }
+  
+  .contact img {
+    margin: 2%;
+    width: 100px;
+    border-radius: 50px;
+  }
+  
+  .iconGroup {
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 1em;
+  }
+  
+  .contact a {
+    padding: 5px 15px;
+    color: white;
+  }
+  
+  .contact a:hover {
+    background-color: white;
+    color: var(--green-green-beige);
+  }

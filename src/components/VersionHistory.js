@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactMarkdown from "react-markdown";
 import gfm from "remark-gfm";
 import line from "../images/line-black.svg";
+import "../styles/versionHistory.css"
 
 /**
  * Multiple loading of react files found here:

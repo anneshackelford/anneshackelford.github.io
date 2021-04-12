@@ -1,0 +1,23 @@
+  /* Projects 
+---------------------------*/
+
+#projects.sectionBar {
+    margin-bottom: 6%;
+  }
+
+.featureList {
+    background-image: url("../images/green_white_fog_compressed_moz.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 4% 0;
+    width: 100%;
+    padding-top: 20px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+  }
+  
+  .featureList h1 {
+    padding: 20px;
+  }

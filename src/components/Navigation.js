@@ -1,7 +1,8 @@
 import React from "react";
 import headerImage from "../images/messageOnPhoneDesignDevelop_medium_cropped_compressed_moz.jpg";
-import Introduction from "./Introduction";
 import { Link, withRouter } from "react-router-dom";
+import "../styles/navigation.css";
+import "../styles.css";
 
 function Navigation({ withBanner = true }) {
   /**
@@ -20,9 +21,9 @@ function Navigation({ withBanner = true }) {
         let content = document.getElementById("content");
         if (content) {
           content.style.display = "none";
-        } 
-      } 
-    } 
+        }
+      }
+    }
   }
 
   /**
@@ -137,7 +138,19 @@ function Navigation({ withBanner = true }) {
               <i className="fas fa-bars"></i>
             </div>
           </div>
-          {withBanner ? <Introduction /> : null}
+          {withBanner ? (
+            <div className="introduction">
+              <div className="summary">
+                Hi!
+                <br />
+                <br />
+                I'm a Senior Front-End Web Developer.
+                <br />
+                <br />
+                Nice to meet you!
+              </div>
+            </div>
+          ) : null}
         </div>
       </div>
       <div className="footerMenu">
@@ -165,7 +178,6 @@ function Navigation({ withBanner = true }) {
 
   if (withBanner) return navWithBanner;
   else return navWithoutBanner;
-
 }
 
 export default withRouter(Navigation);

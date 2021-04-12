@@ -4,12 +4,8 @@ import Blogs from "./components/Blogs";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import About from "./components/About";
 import Home from "./components/Home";
-import useFeatureList from "./requests/useFeatureList";
 
 function App() {
-  // const [featureList, error] = useFeatureList();
-  const error = null;
-  const featureList = [];
 
   return (
     <Router>
@@ -18,7 +14,7 @@ function App() {
             path="/projects"
             exact
             component={() => (
-              <Home featureList={featureList} withBanner={false} />
+              <Home withBanner={false} />
             )}
           />
           <Route
@@ -40,7 +36,7 @@ function App() {
             path="/"
             exact
             component={() => (
-              <Home featureList={featureList} withBanner={true} />
+              <Home withBanner={true} />
             )}
           />
         </Switch>

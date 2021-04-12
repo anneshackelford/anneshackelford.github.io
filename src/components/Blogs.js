@@ -4,6 +4,8 @@ import gfm from "remark-gfm";
 import ScrollAnimation from "react-animate-on-scroll";
 import SectionBar from "./SectionBar";
 import Navigation from "./Navigation";
+import "../styles/blogs.css"
+import "../styles/markdown.css"
 
 /**
  * Multiple loading of react files found here:
@@ -265,7 +267,7 @@ class Blogs extends Component {
         <div id="content" className="content">
         <SectionBar id="blogs" title="Blogs" />
 
-        <div className="blogs">
+        <div className="blogs markdown">
           {posts.map((post, idx) => (
             <div
               onClick={this.onClick}

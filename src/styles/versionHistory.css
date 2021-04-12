@@ -1,0 +1,53 @@
+/* Version History
+---------------------------*/
+
+.versionHistory {
+    background-image: url("../images/beige_white_fog_compressed_moz.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: darkgray;
+    color: black;
+    width: 100%;
+    font-size: 0.7em;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-bottom: 2%;
+    padding-bottom: 20px;
+  }
+  
+  .versionHistory details[open] summary ~ * {
+    animation: sweep 0.5s ease-in-out;
+  }
+  
+  @keyframes sweep {
+    0% {
+      opacity: 0;
+      margin-left: -1%;
+    }
+    100% {
+      opacity: 1;
+      margin-left: 0px;
+    }
+  }
+  
+  .versionHistory details:not(:first-child) {
+    padding-bottom: 0px;
+    padding-bottom: 10px;
+  }
+  
+  .versionHistory .line:not(:first-child) {
+    padding-top: 20px;
+    margin: 0;
+  }
+  
+  .versionHistory details summary {
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .versionHistory .lastUpdated {
+    padding: 20px 0;
+  }
+  

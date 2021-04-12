@@ -1,0 +1,260 @@
+/* Header Menu - Inside Page Menu
+-----------------------------------*/
+
+.pageMenu {
+    visibility: none;
+    opacity: 0;
+    background-color: var(--green-green-beige);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content auto;
+  }
+  
+  .pageMenu.visible {
+    visibility: visible;
+    opacity: 1;
+    z-index: 2;
+  }
+  
+  .pageMenu ul {
+    list-style-image: none;
+    list-style-type: none;
+    list-style-position: outside;
+    padding-inline-start: 0px;
+  }
+  
+  .pageMenu li {
+    text-align: center;
+    font-size: 2em;
+    padding: 1%;
+    color: white;
+  }
+  
+  .pageMenu li a {
+    text-decoration: none;
+    color: white;
+    padding-bottom: 10px;
+  }
+  
+  /* animated line under menu item on focus */
+  .pageMenu li a:after {
+    content: "";
+    display: block;
+    margin: auto;
+    height: 2px;
+    width: 0px;
+    background: transparent;
+    transition: width 0.5s ease, background-color 0.5s ease;
+  }
+  
+  /* animated line under menu item on focus */
+  .pageMenu li a:hover:after {
+    width: 33%;
+    background: white;
+  }
+  
+  .pageMenu .closeMenu {
+    color: white;
+    padding: 14px 16px;
+    margin-top: 2%;
+    margin-left: 2%;
+    justify-self: start;
+    font-size: 1.5em;
+  }
+  
+  .pageMenu .closeMenu:hover {
+    background-color: white;
+    color: var(--green-green-beige);
+    cursor: pointer;
+  }
+  
+  /* Banner Image
+--------------------------------*/
+.bannerImage {
+    min-height: 380px;
+  }
+  
+  /* .bannerImage.container { */
+  .container.withBanner {
+    position: absolute;
+    margin: 2%;
+    width: 90%;
+  }
+  
+  .container.withoutBanner {
+    /* position: absolute; */
+    margin: 2%;
+    width: 90%;
+  }
+  
+  .gradient img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 660px;
+    object-fit: cover;
+    object-position: center;
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+      rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+    transition: 0.5s ease;
+  }
+  
+  .gradient img.smaller {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 660px;
+    object-fit: cover;
+    object-position: center;
+    transform: translate3d(0px, 0px, 0px) scale3d(1.05, 1.05, 1) rotateX(0deg)
+      rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+  }
+  
+  .gradient::after {
+    display: block;
+    position: relative;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0), white);
+    margin-top: -660px;
+    height: 660px;
+    width: 100%;
+    content: "";
+  }
+  
+  /* Header Menu - Horizontal
+  -------------------------------*/
+  
+  .topnav {
+    overflow: hidden;
+    position: relative;
+    color: black;
+    top: 0;
+    margin: 0 auto;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+  }
+  
+  /* name section */
+  .topnav .left {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  
+  /* horizontal menu */
+  .topnav .right {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    background-color: inherit;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+  }
+  
+  /* links in horizontal menu */
+  .topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1em;
+  }
+  
+  /* links in horizontal menu hover */
+  .topnav a:hover {
+    background-color: var(--green-beige);
+    color: black;
+  }
+  
+  /* hamburger is not displayed when not on responsive narrow screen */
+  .topnav .hamburger {
+    display: none;
+  }
+  
+  /* hide the menu and display the hamburger in responsive */
+  @media screen and (max-width: 900px) {
+    .topnav .right a {
+      display: none;
+    }
+    .topnav .hamburger {
+      float: right;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 1em;
+    }
+    .topnav .hamburger:hover {
+      background-color: var(--green-beige);
+      color: black;
+    }
+  }
+  
+  /* Footer Menu for Scroll to Top
+---------------------------------*/
+.footerMenu {
+    position: fixed;
+    z-index: 1;
+    cursor: pointer;
+    bottom: 30px;
+    right: 10px;
+  }
+  
+  .footerMenu #scrollToTopIcon {
+    font-size: 1.5em;
+    display: none; /* hidden on first page */
+    color: gray;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 0;
+  }
+  
+  /* increase icon size on hover with transition on font size */
+  .footerMenu #scrollToTopIcon:hover {
+    font-size: 2em;
+    transition: ease-in;
+  }
+
+  /* Introduction
+---------------------------*/
+.introduction {
+    background-color: var(--green-green-beige);
+    color: white;
+    font-size: 1.5em;
+    margin-left: 5%;
+    margin-right: 15%;
+    text-align: left;
+    margin-top: 200px;
+    max-width: 500px;
+  
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  
+  .introduction .name {
+    letter-spacing: 0.3em;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .introduction img {
+    margin: 0 auto;
+  }
+  
+  .introduction .summary {
+    padding: 20px;
+  }

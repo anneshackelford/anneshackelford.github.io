@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import ScrollAnimation from "react-animate-on-scroll";
 // import phoneAndComputer from "../images/PC-and-phone-compressed-moz.jpg";
-import phoneAndComputer from "../images/PC-and-phone-compressed-moz-height200.jpg"
+// import phoneAndComputer from "../images/PC-and-phone-compressed-moz-height200.jpg";
 import projectPortfolio from "../markdown/projectPosts/projectPortfolio.md";
 import projectPortfolioIntro from "../markdown/projectPosts/projectIntroduction.md";
 import projectLibraries from "../markdown/projectPosts/projectLibraries.md";
 import ReactMarkdown from "react-markdown";
 import SectionBar from "./SectionBar";
+import "../styles/project.css"
+import "../styles/markdown.css"
 
-function Project({ featureList }) {
+function Project() {
   const [markdownProjectPortfolio, setMarkdownProjectPortfolio] = useState([]);
   fetch(projectPortfolio)
     .then((res) => res.text())
@@ -21,11 +23,11 @@ function Project({ featureList }) {
     .then((post) => setMarkdownProjectIntro(post))
     .catch((err) => console.error(err));
 
-    const [markdownProjectLibraries, setMarkdownProjectLibraries] = useState([]);
-    fetch(projectLibraries)
-      .then((res) => res.text())
-      .then((post) => setMarkdownProjectLibraries(post))
-      .catch((err) => console.error(err));
+  const [markdownProjectLibraries, setMarkdownProjectLibraries] = useState([]);
+  fetch(projectLibraries)
+    .then((res) => res.text())
+    .then((post) => setMarkdownProjectLibraries(post))
+    .catch((err) => console.error(err));
 
   return (
     <div>
@@ -34,11 +36,11 @@ function Project({ featureList }) {
         <ScrollAnimation animateIn="fadeIn">
           <ReactMarkdown children={`${markdownProjectIntro}`} />
           <ReactMarkdown
-            className="portfolio"
+            className="portfolio markdown"
             children={`${markdownProjectPortfolio}`}
           />
-                    <ReactMarkdown
-            className="portfolio"
+          <ReactMarkdown
+            className="portfolio markdown"
             children={`${markdownProjectLibraries}`}
           />
         </ScrollAnimation>
