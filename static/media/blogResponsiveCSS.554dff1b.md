@@ -11,7 +11,7 @@ Start by creating your responsive website with narrow dimensions then make it mo
 
 ![](https://i.imgur.com/9paQXpt.jpg)
 
-Once all is working as desired then expand to above 768px to see how the layout is, and then above 1024px. Check font sizes, the amount of space the text and images take up on the screen, the placement of text and images.
+Once all is working as desired then expand to above 768px to see how the layout looks, and then above 1024px. Check font sizes, the amount of space the text and images take up on the screen, the placement of text and images.
 
 
 ## Tip 2: Basic Rules for a Responsive Website
@@ -25,8 +25,8 @@ Once all is working as desired then expand to above 768px to see how the layout 
 
 
 ## Tip 3: Additional Rules for a Responsive Website
-**Grid:** Use grid display to allow the best flow of your items and the most control when going from narrow and wide and vice versa. For example, a 2 column layout can easily be changed into a 1 column layout on a narrow screen.
+**Grid:** Use flex and grid displays to allow the best flow of your items and the most control when going from narrow and wide and vice versa. For example, a 2 column grid layout can easily be changed into a 1 column layout on a narrow screen.  A wrapping flex layout automatically wraps to the number of columns needed when resizing, or moving to a smaller / larger screen.
 
 **Menu:** The menu bar almost always needs to be updated when going from wide to narrow as the width will often not be supported on a narrow screen. The 'hamburger' icon is often used for menus. It can be found in the Font Awesome fonts.  This blog uses a menu that disappears but reappears when scrolling up as the entire website is on one page.
 
-*Last updated: March 23, 2021*
+*Last updated: April 13, 2021*
