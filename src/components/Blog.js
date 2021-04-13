@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import "../styles/blog.css";
 import ReactMarkdown from "react-markdown";
 import gfm from "remark-gfm";
 import "../styles/markdown.css";
+import Navigation from "./Navigation";
+import ScrollAnimation from "react-animate-on-scroll";
 
 function Blog() {
   const [blogs, setBlogs] = useState([]);
@@ -30,7 +32,8 @@ function Blog() {
 
   useEffect(() => {
     if (blogObjects.length > 0) {
-      let blog = blogObjects[id - 1].blog;
+      let blog = null;
+      if (blogObjects[id - 1] != null) blog = blogObjects[id - 1].blog;
       setBlog(blog);
     }
   }, [blogObjects]);
@@ -54,13 +57,25 @@ function Blog() {
   }
 
   return (
-    <div className="content">
-      <ReactMarkdown
-        className="blog markdown"
-        plugins={[gfm]}
-        children={blog}
-      />
-    </div>
+    <React.Fragment>
+      <Navigation withBanner={false} />
+      <div id="content" className="content">
+        {blog ? (
+          <ScrollAnimation animateIn="fadeIn">
+            <ReactMarkdown
+              className="blog markdown"
+              plugins={[gfm]}
+              children={blog}
+            />
+          </ScrollAnimation>
+        ) : (
+          <React.Fragment>
+            <p>The requested Blog is not found.</p>
+            <Link to="/blogs">Go to All Blogs</Link>
+          </React.Fragment>
+        )}
+      </div>
+    </React.Fragment>
   );
 }
 
