@@ -2,8 +2,8 @@ import Navigation from "./Navigation";
 import SectionBar from "./SectionBar";
 import React, { useState, useEffect } from "react";
 import ScrollAnimation from "react-animate-on-scroll";
-import headerImage from "../images/aboutMindMapHeader.jpg";
-import line from "../images/line-black.svg";
+// import headerImage from "../images/aboutMindMapHeader.jpg";
+// import line from "../images/line-black.svg";
 import ReactMarkdown from "react-markdown";
 import "../styles/about.css";
 

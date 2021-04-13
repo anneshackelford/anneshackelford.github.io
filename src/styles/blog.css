@@ -1,0 +1,22 @@
+/* Blog
+---------------------------*/
+
+.blog {
+    background-image: url("../images/green_white_fog_compressed_moz.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+    margin: 4% 0;
+    width: 100%;
+  }
+
+  .blog p:first-of-type img:first-of-type{
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+  }
+
+  .blog img{
+    max-height: 400px;
+  }
