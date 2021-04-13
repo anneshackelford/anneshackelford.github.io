@@ -36,3 +36,14 @@
   max-width: 400px;
   padding: 20px;
 }
+
+@media screen and (hover: hover) {
+  .blogs-flexItem.notFocused {
+    opacity: 0.2;
+    transition: 1s ease;
+  }
+  .blogs-flexItem.focused {
+    opacity: 1;
+    transition: 1s ease;
+  }
+}

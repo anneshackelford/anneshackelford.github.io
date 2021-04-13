@@ -2,8 +2,6 @@ Coming Possible Enhancements
 
 ### React
 * [React Redux](https://react-redux.js.org/)
-* [React Router](https://www.npmjs.com/package/react-router)
-* Improved Database Communication
 
 ### UX
 * [Figma](https://www.figma.com/) 
