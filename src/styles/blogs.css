@@ -2,20 +2,37 @@
 ---------------------------*/
 
 .blogs-flexContainer {
-    background-image: url("../images/green_white_fog_compressed_moz.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: black;
-    margin: 4% 0;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-  
-  .blogs-flexItem {
-    flex: 1;
-    padding: 20px;
-    min-width: 300px;
-  }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.blogs-flexItem {
+  margin: 20px;
+  flex-grow: 0;
+}
+
+.blog-gridContainer {
+  background-color: #e3e0cf;
+  display: grid;
+  grid-template-rows: auto auto;
+  text-decoration: none;
+  color: black;
+}
+
+.blog-gridContainer img {
+  padding: 20px;
+  max-width: 300px;
+  max-height: 300px;
+  min-width: 300px;
+  min-height: 300px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.blog-gridContainer h1 {
+  text-align: center;
+  max-width: 400px;
+  padding: 20px;
+}

@@ -1,4 +1,4 @@
-# Debatable Topics, Links, Tips
+# Debatable Topics, Tips
 ![](https://i.imgur.com/8sjxvAT.jpg)
 
 Hi! See below some of my latest thoughts.
