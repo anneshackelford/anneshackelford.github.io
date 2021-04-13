@@ -1,6 +1,5 @@
 import React from "react";
 import Contact from "./components/Contact";
-import Blogs2 from "./components/Blogs2";
 import Blogs from "./components/Blogs";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import About from "./components/About";
@@ -15,11 +14,6 @@ function App() {
           path="/projects"
           exact
           component={() => <Home withBanner={false} />}
-        />
-        <Route
-          path="/blogs2"
-          exact
-          component={() => <Blogs2 withBanner={false} />}
         />
         <Route path={`/blogs/:id`} component={() => <Blog />} />
         <Route

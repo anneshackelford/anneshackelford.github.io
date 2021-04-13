@@ -98,11 +98,6 @@ function Navigation({ withBanner = true }) {
           </Link>
         </li>
         <li>
-          <Link to="/blogs2" onClick={closePageMenu}>
-            Blogs2
-          </Link>
-        </li>
-        <li>
           <Link to="/blogs" onClick={closePageMenu}>
             Blogs
           </Link>
@@ -136,7 +131,6 @@ function Navigation({ withBanner = true }) {
           <div className="right">
             <Link to="/">Home</Link>
             <Link to="/projects">Projects</Link>
-            <Link to="/blogs2">Blogs2</Link>
             <Link to="/blogs">Blogs</Link>
             <Link to="/about">About Me</Link>
             <Link to="/contact">Contact</Link>
