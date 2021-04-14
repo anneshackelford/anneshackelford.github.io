@@ -14,13 +14,13 @@ Coming Possible Enhancements
 ### Testing / Debugging
 * [Jest](https://jestjs.io/)
 * Server Logs
-* Lighthouse Report 
+* Lighthouse Report publishing
 
-### CSS Concepts
+### Blog: CSS Concepts
 * [CSS position Property](https://www.w3schools.com/cssref/pr_class_position.asp)
 * [CSS Float Property](https://www.w3schools.com/cssref/pr_class_float.asp)
 
-### CSS / HTML / JavaScript
+### Blog: CSS / HTML / JavaScript
 * [Bootstrap](https://getbootstrap.com/)
 * [jQuery](https://jquery.com/)
 * [Angular](https://angular.io/)

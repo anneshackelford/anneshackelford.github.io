@@ -36,14 +36,14 @@ body {
 }
 @media screen and (min-width: 735px) {
   body {
-    font-size: 1.3em;
+    /* font-size: 1.2em; */
   }
 }
-@media screen and (min-width: 1300px) {
+/* @media screen and (min-width: 1300px) {
   body {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
-}
+} */
 
 ul {
   list-style-type: circle;
