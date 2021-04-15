@@ -20,3 +20,13 @@
   .blog img{
     max-height: 400px;
   }
+
+  .blogContent {
+    width: 80%;
+  }
+  
+  @media screen and (min-width: 1300px) {
+    .blogContent {
+      width: 60%;
+    }
+  }

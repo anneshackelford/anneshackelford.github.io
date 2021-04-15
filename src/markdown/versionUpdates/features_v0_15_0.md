@@ -11,5 +11,5 @@ Version v0.15.0: Apr 3, 2021
 * lighthouse reports saved
 * images reported in lighthouse report are compressed to Moz.JPEG
 
-## Known Bugs / Restrictions
+### Known Bugs / Restrictions
 * Home class has an issue in the console

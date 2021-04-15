@@ -17,14 +17,7 @@ html {
 }
 
 body {
-  /* font-family: "Shippori Mincho", serif; */
-  /* font-family: 'Roboto', sans-serif; */
-  /* font-family: "Montserrat", sans-serif; */
-  /* font-family: 'Source Sans Pro', sans-serif;   */
-  /* font-family: "Lato", sans-serif; */
-  /* font-family: "Poppins", sans-serif; */
   font-family: "Raleway", sans-serif;
-  /* font-family: 'Architects Daughter', cursive; */
   font-size: 1em;
 
   /* the contact page had no scroll bar so the menus would move when navigating there */
@@ -36,14 +29,20 @@ body {
 }
 @media screen and (min-width: 735px) {
   body {
-    /* font-size: 1.2em; */
-  }
-}
-/* @media screen and (min-width: 1300px) {
-  body {
     font-size: 1.2em;
   }
-} */
+}
+@media screen and (min-width: 1300px) {
+  body {
+    font-size: 1.5em;
+  }
+}
+@media screen and (min-width: 735px) {
+  h1 {
+    font-size: 1.2em;
+  }
+}
+
 
 ul {
   list-style-type: circle;

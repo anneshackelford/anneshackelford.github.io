@@ -59,7 +59,7 @@ function Blog() {
   return (
     <React.Fragment>
       <Navigation withBanner={false} />
-      <div id="content" className="content">
+      <div id="content" className="content blogContent">
         {blog ? (
           <ScrollAnimation animateIn="fadeIn">
             <ReactMarkdown
@@ -68,12 +68,7 @@ function Blog() {
               children={blog}
             />
           </ScrollAnimation>
-        ) : (
-          <React.Fragment>
-            <p>The requested Blog is not found.</p>
-            <Link to="/blogs">Go to All Blogs</Link>
-          </React.Fragment>
-        )}
+        ) : null}
       </div>
     </React.Fragment>
   );
