@@ -11,5 +11,5 @@ Version v0.13.0: Mar 29, 2021
 ### Internal
 * installed react-router-dom 
 
-## Known Bugs / Restrictions
+### Known Bugs / Restrictions
 * 

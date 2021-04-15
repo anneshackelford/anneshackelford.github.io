@@ -16,5 +16,5 @@ Version v0.14.0: Apr 2, 2021
 * FeatureList class renamed to Project
 * new Home class that serves at Home page with banner, projects, version history, and also for the projects page (no banner or version history)
 
-## Known Bugs / Restrictions
+### Known Bugs / Restrictions
 * Home class has an issue in the console
