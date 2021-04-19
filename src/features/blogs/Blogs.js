@@ -1,12 +1,21 @@
-import Navigation from "./Navigation";
-import SectionBar from "./SectionBar";
+import Navigation from "../../app/Navigation";
+import SectionBar from "../../app/SectionBar";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 // import headerImage from "../images/aboutMindMapHeader.jpg";
 // import line from "../images/line-black.svg";
-import "../styles/blogs.css";
-import "../styles/markdown.css";
+import "../../styles/blogs.css";
+import "../../styles/markdown.css";
 import ScrollAnimation from "react-animate-on-scroll";
+import { useSelector, useDispatch } from 'react-redux';
+import {
+  decrement,
+  increment,
+  incrementByAmount,
+  incrementAsync,
+  incrementIfOdd,
+  selectCount,
+} from '../../redux/reducers/counterSlice';
 
 function Blogs({ withBanner, match }) {
   const [blogs, setBlogs] = useState([]);
@@ -15,7 +24,7 @@ function Blogs({ withBanner, match }) {
   useEffect(() => {
     const importAll = (r) => r.keys().map(r);
     const markdownFiles = importAll(
-      require.context("../markdown/blogPosts", false, /\.md$/)
+      require.context("./markdown", false, /\.md$/)
     )
       .sort()
       .reverse();

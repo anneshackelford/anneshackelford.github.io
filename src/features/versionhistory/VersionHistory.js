@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import ReactMarkdown from "react-markdown";
 import gfm from "remark-gfm";
-import line from "../images/line-black.svg";
-import "../styles/versionHistory.css"
+import line from "../../images/line-black.svg";
+import "../../styles/versionHistory.css"
 
 /**
  * Multiple loading of react files found here:
@@ -14,7 +14,7 @@ import "../styles/versionHistory.css"
 
 const importAll = (r) => r.keys().map(r);
 const markdownFiles = importAll(
-  require.context("../markdown/versionUpdates", false, /\.md$/)
+  require.context("./markdown", false, /\.md$/)
 )
   .sort()
   .reverse();

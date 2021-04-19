@@ -2,7 +2,7 @@ import React from "react";
 import headerImage from "../images/messageOnPhoneDesignDevelop_medium_cropped_compressed_moz.jpg";
 import { Link, withRouter } from "react-router-dom";
 import "../styles/navigation.css";
-import "../styles.css";
+import "../styles/styles.css";
 
 function Navigation({ withBanner = true }) {
   /**

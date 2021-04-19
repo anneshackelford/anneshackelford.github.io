@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import "../styles/blog.css";
+import "../../styles/blog.css";
 import ReactMarkdown from "react-markdown";
 import gfm from "remark-gfm";
-import "../styles/markdown.css";
-import Navigation from "./Navigation";
+import "../../styles/markdown.css";
+import Navigation from "../../app/Navigation";
 import ScrollAnimation from "react-animate-on-scroll";
 
 function Blog() {
@@ -17,7 +17,7 @@ function Blog() {
   useEffect(() => {
     const importAll = (r) => r.keys().map(r);
     const markdownFiles = importAll(
-      require.context("../markdown/blogPosts", false, /\.md$/)
+      require.context("./markdown", false, /\.md$/)
     )
       .sort()
       .reverse();
@@ -68,7 +68,9 @@ function Blog() {
               children={blog}
             />
           </ScrollAnimation>
-        ) : null}
+        ) : <section>
+        <h2>Post not found</h2>
+      </section>}
       </div>
     </React.Fragment>
   );

@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import ScrollAnimation from "react-animate-on-scroll";
 // import phoneAndComputer from "../images/PC-and-phone-compressed-moz.jpg";
 // import phoneAndComputer from "../images/PC-and-phone-compressed-moz-height200.jpg";
-import projectPortfolio from "../markdown/projectPosts/projectPortfolio.md";
-import projectPortfolioIntro from "../markdown/projectPosts/projectIntroduction.md";
-import projectLibraries from "../markdown/projectPosts/projectLibraries.md";
+import projectPortfolio from "./markdown/projectPortfolio.md";
+import projectPortfolioIntro from "./markdown/projectIntroduction.md";
+import projectLibraries from "./markdown/projectLibraries.md";
 import ReactMarkdown from "react-markdown";
-import SectionBar from "./SectionBar";
-import "../styles/project.css"
-import "../styles/markdown.css"
+import SectionBar from "../../app/SectionBar";
+import "../../styles/project.css"
+import "../../styles/markdown.css"
 
 function Project() {
   const [markdownProjectPortfolio, setMarkdownProjectPortfolio] = useState([]);

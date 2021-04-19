@@ -1,10 +1,10 @@
 import React from "react";
-import profile from "../images/profile.jpg";
-import line from "../images/line-white.svg";
+import profile from "../../images/profile.jpg";
+import line from "../../images/line-white.svg";
 import ScrollAnimation from "react-animate-on-scroll";
-import SectionBar from "./SectionBar";
-import Navigation from "./Navigation";
-import '../styles/contact.css'
+import SectionBar from "../../app/SectionBar";
+import Navigation from "../../app/Navigation";
+import '../../styles/contact.css'
 
 function Contact({ withBanner }) {
   return (

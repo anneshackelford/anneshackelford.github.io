@@ -1,10 +1,10 @@
 import React from "react";
-import Contact from "./components/Contact";
-import Blogs from "./components/Blogs";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import About from "./components/About";
-import Home from "./components/Home";
-import Blog from "./components/Blog";
+import Contact from "./features/contact/Contact";
+import Blogs from "./features/blogs/Blogs";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
+import About from "./features/about/About";
+import Home from "./app/Home";
+import Blog from "./features/blogs/Blog";
 
 function App() {
   return (
