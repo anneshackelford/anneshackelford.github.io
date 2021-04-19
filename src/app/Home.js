@@ -1,7 +1,7 @@
 import React from "react";
 import Navigation from "./Navigation";
 import Project from "../features/project/Project";
-import VersionHistory from "../features/temp/VersionHistory";
+import VersionHistory from "../features/versionHistory/VersionHistory";
 
 function Home({ withBanner }) {
   return (
