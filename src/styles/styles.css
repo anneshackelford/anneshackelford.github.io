@@ -1,7 +1,102 @@
-:root {
-  --green-green-beige: #9fa8a3;
-  --green-beige: #c5d5cb;
-  --beige: #e3e0cf;
+/* .default {
+  --primary-color: #e3e0cf;
+  --secondary-color:  #9fa8a3;
+  --background-default: #c5d5cb;
+  --background-paper: #FFF;
+  --text-primary: #333;
+  --text-secondary: #333;
+  --text-error: #B33;
+} */
+
+/* .dark-theme {
+  --primary-color: #9fa8a3;
+  --secondary-color:  #e3e0cf;
+  --background-default: black;
+  --background-paper: black;
+  --text-primary:  #e3e0cf;
+  --text-secondary: black;
+  --text-error: #B33;
+} */
+
+.default {
+  --background-default-color: white;
+  --text-on-background-default-color: rgb(56, 56, 56);
+  --primary-color: #e3e0cf;
+  --text-on-primary-color: black;
+  --secondary-color: #9fa8a3;
+  --text-on-secondary-color: black;
+}
+
+.dark-theme {
+  --background-default-color: black;
+  --text-on-background-default-color: #e3e0cf;
+  --primary-color: #9fa8a3;
+  --text-on-primary-color: black;
+  --secondary-color: #e3e0cf;
+  --text-on-secondary-color: black;
+}
+
+/* .flashy {
+  --background-default-color: #12151f;
+  --text-on-background-default-color: #05f4b7;
+  --primary-color: #12151f;
+  --text-on-primary-color: #05f4b7;
+  --secondary-color: #371bb1;
+  --text-on-secondary-color: #05f4b7;
+} */
+
+.rain-coats {
+  --background-default-color: white;
+  --text-on-background-default-color: #be2f29;
+  --primary-color: #ecaf44;
+  --text-on-primary-color: #0c1115;
+  --secondary-color: #1a2c42;
+  --text-on-secondary-color: #ecaf44;
+}
+
+.dark-rain-coats {
+  --background-default-color: #0c1115;
+  --text-on-background-default-color: #be2f29;
+  --primary-color: #1a2c42;
+  --text-on-primary-color: #ecaf44;
+  --secondary-color: #1a2c42;
+  --text-on-secondary-color: #ecaf44;
+}
+
+.sea-foam {
+  --background-default-color: #f7f7f7;
+  --text-on-background-default-color: #373a36;
+  --primary-color: #7da2a9;
+  --text-on-primary-color: #f7f7f7;
+  --secondary-color: #7da2a9;
+  --text-on-secondary-color: #f7f7f7;
+}
+
+.dark-sea-foam {
+  --background-default-color: #373a36;
+  --text-on-background-default-color: #f7f7f7; 
+  --primary-color:  #373a36;
+  --text-on-primary-color: #7da2a9;
+  --secondary-color:  #7da2a9; 
+  --text-on-secondary-color: #f7f7f7;
+}
+
+.peach-trees {
+  --background-default-color: #e6e2dd;
+  --text-on-background-default-color: #373a36;
+  --primary-color: #d48166;
+  --text-on-primary-color: #373a36;
+  --secondary-color: #373a36;
+  --text-on-secondary-color:   #d48166;
+}
+
+.dark-peach-trees {
+  --background-default-color:   #373a36;
+  --text-on-background-default-color: #e6e2dd;
+  --primary-color:   #373a36;
+  --text-on-primary-color: #d48166;
+  --secondary-color:   #d48166; 
+  --text-on-secondary-color: #e6e2dd; 
 }
 
 /* Global styles
@@ -19,13 +114,14 @@ html {
 body {
   font-family: "Raleway", sans-serif;
   font-size: 1em;
+  color: var(--text-on-background-default-color);
+  background: var(--background-default-color);
 
   /* the contact page had no scroll bar so the menus would move when navigating there */
-  overflow-y: scroll; 
+  overflow-y: scroll;
 
   /* zoomed image makes horizontal scrollbar appear and not needed */
   overflow-x: hidden;
-  
 }
 @media screen and (min-width: 735px) {
   body {
@@ -43,7 +139,6 @@ body {
   }
 }
 
-
 ul {
   list-style-type: circle;
 }
@@ -52,7 +147,7 @@ ul {
 ---------------------------*/
 
 .content {
-  background-color: white;
+  background-color: var(--background-default-color);
   display: flex;
   width: 95%;
   margin: 0 auto;
@@ -68,3 +163,23 @@ ul {
   }
 }
 
+/* Theme Selector
+---------------------------*/
+#theme-selector {
+  font-family: "Raleway", sans-serif;
+  font-size: 1em;
+  padding: 5px;
+  background-color: var(--background-default-color);
+  color: var(--text-on-background-default-color);
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.themeSelector{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 53px;
+  padding-bottom: 14px;
+;
+}

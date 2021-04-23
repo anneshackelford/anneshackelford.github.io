@@ -5,7 +5,7 @@
 }
 
 .markdown a {
-  color: #5e7668;
+  color: var(--text-on-primary-color)
 }
 
 .markdown p {
@@ -79,12 +79,12 @@
 
 .markdown tr:last-child {
   background-color: #f2f2f2;
-  border-bottom: solid thin var(--green-green-beige);
+  border-bottom: solid thin var(--secondary-color);
 }
 
 .markdown th {
-  background-color: var(--green-green-beige);
-  color: white;
+  background-color: var(--secondary-color);
+  color: var(--text-on-secondary-color);
 }
 
 .markdown tbody {
@@ -101,7 +101,7 @@
 }
 
 .markdown blockquote {
-  border-left: solid thick var(--green-beige);
+  border-left: solid thick var(--primary-color);
 }
 
 .markdown ul:last-child {

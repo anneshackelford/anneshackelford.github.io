@@ -1,71 +1,40 @@
 import React, { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import "../../styles/blog.css";
 import ReactMarkdown from "react-markdown";
 import gfm from "remark-gfm";
 import "../../styles/markdown.css";
 import Navigation from "../../app/Navigation";
 import ScrollAnimation from "react-animate-on-scroll";
+import { useSelector } from "react-redux";
 
 function Blog() {
-  const [blogs, setBlogs] = useState([]);
-  const [blogObjects, setBlogObjects] = useState([]);
-  const [blog, setBlog] = useState();
+  const [post, setPost] = useState();
+  const posts = useSelector((state) => state.posts.posts);
 
   let { id } = useParams();
 
   useEffect(() => {
-    const importAll = (r) => r.keys().map(r);
-    const markdownFiles = importAll(
-      require.context("./markdown", false, /\.md$/)
-    )
-      .sort()
-      .reverse();
-
-    fetchBlogPosts(markdownFiles);
-  }, []);
-
-  useEffect(() => {
-    let blogObjects = getListOfBlogObjects();
-    setBlogObjects(blogObjects);
-  }, [blogs]);
-
-  useEffect(() => {
-    if (blogObjects.length > 0) {
-      let blog = null;
-      if (blogObjects[id - 1] != null) blog = blogObjects[id - 1].blog;
-      setBlog(blog);
+    if (posts.length > 0) {
+      let post = null;
+      if (posts[id - 1] != null) post = posts[id - 1].blog;
+      setPost(post);
     }
-  }, [blogObjects]);
-
-  const fetchBlogPosts = async (markdownFiles) => {
-    const results = await Promise.all(
-      markdownFiles.map((file) => fetch(file).then((res) => res.text()))
-    ).catch((err) => console.error(err));
-
-    setBlogs(results);
-  };
-
-  function getListOfBlogObjects() {
-    let blogObjects = blogs.map((article, idx) => {
-      let index = article.indexOf("\n");
-      let firstLine = article.slice(0, index);
-      let blogObject = { title: firstLine.slice(2), index: idx, blog: article };
-      return blogObject;
-    });
-    return blogObjects;
-  }
+    return () => {
+      console.log('BLOG: Cleaning up like unsubscribing to a service');
+    };
+  }, [posts]);
 
   return (
     <React.Fragment>
       <Navigation withBanner={false} />
       <div id="content" className="content blogContent">
-        {blog ? (
+        {post ? (
           <ScrollAnimation animateIn="fadeIn">
             <ReactMarkdown
               className="blog markdown"
               plugins={[gfm]}
-              children={blog}
+              children={post}
             />
           </ScrollAnimation>
         ) : <section>

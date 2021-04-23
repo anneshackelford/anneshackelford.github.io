@@ -2,11 +2,8 @@
 ---------------------------*/
 
 .contact {
-    background-image: url("../images/green_beige_fog_compressed_moz.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
+    background-color: var(--secondary-color);
+    color: var(--text-on-secondary-color);
     margin: 4% 0;
     padding: 20px;
     width: 100%;
@@ -21,7 +18,7 @@
   }
   
   .iconGroup {
-    color: white;
+    color: var(--text-on-secondary-color);
     padding: 20px;
     display: flex;
     flex-direction: row;
@@ -31,10 +28,10 @@
   
   .contact a {
     padding: 5px 15px;
-    color: white;
+    color: var(--text-on-secondary-color);
   }
   
   .contact a:hover {
-    background-color: white;
-    color: var(--green-green-beige);
+    background-color: var(--background-default-color);
+    color: var(--text-on-background-default-color);
   }

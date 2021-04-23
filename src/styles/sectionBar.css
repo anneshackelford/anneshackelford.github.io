@@ -4,8 +4,8 @@
     font-size: 2em;
     border-bottom-style: solid;
     border-bottom-width: thin;
-    color: var(--green-green-beige);
-    background-color: white;
+    color: var(--text-on-background-default-color);
+    background-color: var(--background-default-color);
     text-align: center;
     text-transform: uppercase;
     padding-top: 40px;

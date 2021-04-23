@@ -14,13 +14,13 @@
 }
 
 .blog-gridContainer {
-  background-color: #e3e0cf;
+  background-color: var(--primary-color);
   width: 280px;
   height: 452px;
   display: grid;
   grid-template-rows: auto auto;
   text-decoration: none;
-  color: black;
+  color: var(--text-on-primary-color)
 }
 
 .blog-gridContainer img {

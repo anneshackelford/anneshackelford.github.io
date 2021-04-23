@@ -52,18 +52,15 @@ const postsSlice = createSlice({
   reducers: {},
   extraReducers: {
     [fetchPosts.pending]: (state, action) => {
-      console.log("fetch pending", action);
       state.status = "loading";
     },
     [fetchPosts.fulfilled]: (state, action) => {
       state.status = "succeeded";
       // Add any fetched posts to the array
-      console.log("fetch fulfilled action", action);
       const markdowbFilesContent = action.payload;
       getListOfPosts(state, markdowbFilesContent);
     },
     [fetchPosts.rejected]: (state, action) => {
-      console.log("fetch rejected", action);
       state.status = "failed";
       state.error = action.error.message;
     },

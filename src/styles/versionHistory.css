@@ -2,19 +2,15 @@
 ---------------------------*/
 
 .versionHistory {
-    background-image: url("../images/beige_white_fog_compressed_moz.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: darkgray;
-    color: black;
+    background-color: var(--primary-color);
+    color: var(--text-on-primary-color);
     width: 100%;
     font-size: 0.7em;
-    padding-top: 20px;
+    /* padding-top: 20px; */
     padding-right: 20px;
     padding-left: 20px;
     margin-bottom: 2%;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
   }
   
   .versionHistory details[open] summary ~ * {

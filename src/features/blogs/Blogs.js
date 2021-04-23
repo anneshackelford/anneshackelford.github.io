@@ -13,8 +13,8 @@ import { fetchPosts } from "./blogsSlice";
 function Blogs({ withBanner, match }) {
   const dispatch = useDispatch();
   const posts = useSelector((state) => state.posts.posts);
-  const status = useSelector((state) => state.posts.status);
-  const error = useSelector((state) => state.posts.error);
+  // const status = useSelector((state) => state.posts.status);
+  // const error = useSelector((state) => state.posts.error);
 
   useEffect(() => {
     const importAll = (r) => r.keys().map(r);
@@ -25,6 +25,10 @@ function Blogs({ withBanner, match }) {
       .reverse();
 
     dispatch(fetchPosts(markdownFileNames));
+
+    return () => {
+      console.log('BLOGS: Cleaning up like unsubscribing to a service');
+    };
   }, []);
 
   function getOneBlog(node) {
