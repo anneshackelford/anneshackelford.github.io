@@ -32,8 +32,10 @@ Hi! See below some of my latest thoughts.
 * [w3schools.com](https://www.w3schools.com/)
 * [CSS-TRICKS](https://css-tricks.com/)
 * [React Router Training](https://reactrouter.com/web/guides/quick-start)
+* [Mirage.js mock API tool](https://miragejs.com/): "Build complete frontend features, even if your API doesn't exist. Mirage JS is an API mocking library that lets you build, test and share a complete working JavaScript application without having to rely on any backend services."
+
 See others in the project section for this website
 
 That's all for now!
 
-*Last updated: March 29, 2021*
+*Last updated: April 19, 2021*
