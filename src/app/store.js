@@ -5,6 +5,6 @@ import postsReducer from '../features/blogs/blogsSlice'
 
 export default configureStore({
   reducer: {
-    blogPosts: postsReducer
+    posts: postsReducer
   },
 })

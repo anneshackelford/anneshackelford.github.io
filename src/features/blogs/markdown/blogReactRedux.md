@@ -21,6 +21,7 @@ Parts of this website that do not have anything in particular to do with Redux:
 
 * [React-Redux](https://react-redux.js.org/)
 * [Redux](https://redux.js.org/)
+* [Mirage.js mock API tool](https://miragejs.com/): "Build complete frontend features, even if your API doesn't exist. Mirage JS is an API mocking library that lets you build, test and share a complete working JavaScript application without having to rely on any backend services."
 
-*Last updated: April 15, 2021*
+*Last updated: April 19, 2021*
 

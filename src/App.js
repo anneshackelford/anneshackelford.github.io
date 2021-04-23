@@ -5,9 +5,11 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-d
 import About from "./features/about/About";
 import Home from "./app/Home";
 import Blog from "./features/blogs/Blog";
+import "./styles/styles.css"
 
 function App() {
   return (
+    <div className="**featured**">
     <Router>
       <Switch>
         <Route
@@ -34,6 +36,7 @@ function App() {
         <Route path="/" exact component={() => <Home withBanner={true} />} />
       </Switch>
     </Router>
+    </div>
   );
 }
 

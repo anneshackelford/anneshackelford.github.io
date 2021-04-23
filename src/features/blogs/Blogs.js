@@ -1,89 +1,41 @@
 import Navigation from "../../app/Navigation";
 import SectionBar from "../../app/SectionBar";
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 // import headerImage from "../images/aboutMindMapHeader.jpg";
 // import line from "../images/line-black.svg";
 import "../../styles/blogs.css";
 import "../../styles/markdown.css";
 import ScrollAnimation from "react-animate-on-scroll";
-import { useSelector, useDispatch } from 'react-redux';
-import {
-  decrement,
-  increment,
-  incrementByAmount,
-  incrementAsync,
-  incrementIfOdd,
-  selectCount,
-} from '../../redux/reducers/counterSlice';
+import { useSelector, useDispatch } from "react-redux";
+import { fetchPosts } from "./blogsSlice";
 
 function Blogs({ withBanner, match }) {
-  const [blogs, setBlogs] = useState([]);
-  const [blogObjects, setBlogObjects] = useState([]);
+  const dispatch = useDispatch();
+  const posts = useSelector((state) => state.posts.posts);
+  const status = useSelector((state) => state.posts.status);
+  const error = useSelector((state) => state.posts.error);
 
   useEffect(() => {
     const importAll = (r) => r.keys().map(r);
-    const markdownFiles = importAll(
+    const markdownFileNames = importAll(
       require.context("./markdown", false, /\.md$/)
     )
       .sort()
       .reverse();
 
-    fetchBlogPosts(markdownFiles);
+    dispatch(fetchPosts(markdownFileNames));
   }, []);
 
-  const fetchBlogPosts = async (markdownFiles) => {
-    const results = await Promise.all(
-      markdownFiles.map((file) => fetch(file).then((res) => res.text()))
-    ).catch((err) => console.error(err));
-
-    setBlogs(results);
-  };
-
-  useEffect(() => {
-    let blogObjects = getListOfBlogObjects();
-    setBlogObjects(blogObjects);
-  }, [blogs]);
-
-  function getListOfBlogObjects() {
-    let blogObjects = blogs.map((article, idx) => {
-      let title = getTitle(article);
-      let imageLink = getImage(article);
-      let blogObject = {
-        title: title,
-        index: idx,
-        imageLink: imageLink,
-        blog: article,
-      };
-      return blogObject;
-    });
-    return blogObjects;
-  }
-
-  function getTitle(article) {
-    let index = article.indexOf("\n");
-    let firstLine = article.slice(0, index);
-    let title = firstLine.slice(2);
-    return title;
-  }
-
-  function getImage(article) {
-    let index = article.indexOf("\n");
-    let restOfArticle = article.slice(index + 1);
-    index = restOfArticle.indexOf("\n");
-    let imageLink = restOfArticle.slice(4, index - 1);
-    return imageLink;
-  }
-
-  function getOneBlog  (node)  {
+  function getOneBlog(node) {
     while (!node.classList.contains("blogs-flexItem")) {
       node = node.parentNode;
     }
     let oneBlog = node;
     return oneBlog;
-  };
+  }
 
-  function getSiblings  (e)  {
+  function getSiblings(e) {
     // for collecting siblings
     let siblings = [];
     // if no parent, return no sibling
@@ -106,8 +58,7 @@ function Blogs({ withBanner, match }) {
       sibling = sibling.nextSibling;
     }
     return siblings;
-  };
-
+  }
 
   function onMouseEnter(e) {
     // add notFocused class to all but this one
@@ -144,9 +95,8 @@ function Blogs({ withBanner, match }) {
       <Navigation withBanner={withBanner} />
       <div id="content" className="content">
         <SectionBar id="blogs" title="Blogs" />
-
         <div className="blogs-flexContainer">
-          {blogObjects.map((blogObject, idx) => (
+          {posts.map((post, idx) => (
             <div
               key={idx}
               className="blogs-flexItem"
@@ -158,11 +108,11 @@ function Blogs({ withBanner, match }) {
                   className="blog-gridContainer"
                   to={{
                     pathname: `/blogs/${idx + 1}`,
-                    state: { blog: blogObject.blog },
+                    state: { blog: post.blog },
                   }}
                 >
-                  <img src={blogObject.imageLink} alt="Blog" />
-                  <h1> {blogObject.title}</h1>
+                  <img src={post.imageLink} alt="Blog" />
+                  <h1> {post.title}</h1>
                 </Link>
               </ScrollAnimation>
             </div>
