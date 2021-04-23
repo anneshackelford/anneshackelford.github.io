@@ -23,8 +23,8 @@ function ThemeSelector() {
         <option value="dark-sea-foam">Dark Sea Foam</option>
         <option value="peach-trees">Peach Trees</option>
         <option value="dark-peach-trees">Dark Peach Trees</option>
-        <option value="rain-coats">Rain Coats</option>
-        <option value="dark-rain-coats">Rain Coats at Night</option>
+        <option value="rain-coats">Sailing</option>
+        <option value="dark-rain-coats">Dark Sailing</option>
       </select>
     </div>
   );
