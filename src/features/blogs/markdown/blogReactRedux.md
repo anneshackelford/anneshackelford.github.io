@@ -5,8 +5,6 @@
 
 Redux is a predictable state container for JavaScript applications.  React Redux implements this the React way for easy integration into React applications.
 
-![](https://d33wubrfki0l68.cloudfront.net/97f337956b87f4589dbf68591f22f5f3dacf2736/55f2a/img/redux_white.svg)
-
 
 ### React Redux on This Website
 This website you are on is written in React. This means:

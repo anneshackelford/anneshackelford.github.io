@@ -74,11 +74,12 @@
 }
 
 .markdown tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: var(--text-on-secondary-color);
+  color: var(--secondary-color);
 }
 
 .markdown tr:last-child {
-  background-color: #f2f2f2;
+  background-color: var(--text-on-secondary-color);
   border-bottom: solid thin var(--secondary-color);
 }
 
@@ -88,7 +89,7 @@
 }
 
 .markdown tbody {
-  border-bottom: solid thin #f2f2f2;
+  border-bottom: solid thin var(--text-on-secondary-color);
 }
 
 .markdown pre {
@@ -97,7 +98,7 @@
 
 .markdown code {
   font-family: "Courier New", Courier, monospace;
-  background-color: #f2f2f2;
+  background-color: var(--text-on-secondary-color);
 }
 
 .markdown blockquote {

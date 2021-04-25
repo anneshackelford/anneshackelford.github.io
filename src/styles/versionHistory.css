@@ -4,6 +4,7 @@
 .versionHistory {
     background-color: var(--primary-color);
     color: var(--text-on-primary-color);
+    border: solid thin var(--content-border-color);
     width: 100%;
     font-size: 0.7em;
     /* padding-top: 20px; */

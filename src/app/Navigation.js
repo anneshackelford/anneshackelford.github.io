@@ -1,5 +1,4 @@
 import React from "react";
-import headerImage from "../images/messageOnPhoneDesignDevelop_medium_cropped_compressed_moz.jpg";
 import { Link, withRouter } from "react-router-dom";
 import "../styles/navigation.css";
 import "../styles/styles.css";
@@ -168,7 +167,8 @@ function Navigation({ withBanner = true }) {
       <div className="bannerImage">
         {navMenu}
         <div className="gradient">
-          <img src={headerImage} alt="CSS" id="imageToTransform" />
+        {/* <img src={headerImage} alt="CSS" id="imageToTransform" /> */}
+        <img  alt="CSS" id="imageToTransform" />
         </div>
       </div>
     </div>

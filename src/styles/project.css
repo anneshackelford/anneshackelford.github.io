@@ -8,6 +8,7 @@
 .featureList {
     color:var(--text-on-primary-color);
     background-color: var(--primary-color);
+    border: solid thin var(--content-border-color);
     margin: 4% 0;
     width: 100%;
     padding-top: 20px;

@@ -15,6 +15,7 @@
 
 .blog-gridContainer {
   background-color: var(--primary-color);
+  border: solid thin var(--content-border-color);
   width: 280px;
   height: 452px;
   display: grid;
@@ -47,10 +48,10 @@
 @media screen and (hover: hover) {
   .blogs-flexItem.notFocused {
     opacity: 0.2;
-    transition: 1s ease;
+    transition: 0.2s ease;
   }
   .blogs-flexItem.focused {
     opacity: 1;
-    transition: 1s ease;
+    transition: 0.2s ease;
   }
 }

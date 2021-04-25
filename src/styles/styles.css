@@ -25,6 +25,8 @@
   --text-on-primary-color: black;
   --secondary-color: #9fa8a3;
   --text-on-secondary-color: black;
+  --content-border-color: black; 
+  --header-image: url(../images/headerImage-phone.jpg);
 }
 
 .dark-theme {
@@ -34,6 +36,82 @@
   --text-on-primary-color: black;
   --secondary-color: #e3e0cf;
   --text-on-secondary-color: black;
+  --content-border-color: black; 
+  --header-image: url(../images/headerImage-phone.jpg);
+}
+
+  /* Theme Swatches */
+.Aerial-of-waves-and-reefs,-Oahu,-Hawaii-1-hex { color: #DCE4F2; }
+.Aerial-of-waves-and-reefs,-Oahu,-Hawaii-2-hex { color: #03A6A6; }
+.Aerial-of-waves-and-reefs,-Oahu,-Hawaii-3-hex { color: #027373; }
+.Aerial-of-waves-and-reefs,-Oahu,-Hawaii-4-hex { color: #012623; }
+.Aerial-of-waves-and-reefs,-Oahu,-Hawaii-5-hex { color: #734230; }
+.splash-new {
+  --background-default-color: white;
+  --text-on-background-default-color: #027373; 
+  --primary-color: white;
+  --text-on-primary-color: #027373;
+  --secondary-color: #027373;
+  --text-on-secondary-color: white;
+  --content-border-color: #027373;
+  --header-image: url(../images/headerImage-splash2.jpg);
+}
+
+.dark-splash-new {
+  --background-default-color: #080808;
+  --text-on-background-default-color: #03A6A6;
+  --primary-color: #080808;
+  --text-on-primary-color: #03A6A6;
+  --secondary-color: black;
+  --text-on-secondary-color: #03A6A6;
+  --content-border-color: #027373;
+  --header-image: url(../images/headerImage-splash2.jpg);
+}
+
+
+.splash {
+  --background-default-color: white;
+  --text-on-background-default-color: #072233ff;
+  --primary-color: #e1e0dcff;
+  --text-on-primary-color:  #072233ff;
+  --secondary-color: #072233ff;
+  --text-on-secondary-color: #e1e0dcff;
+  --content-border-color: #7A5A4Bff;
+  --header-image: url(../images/headerImage-splash.jpg);
+}
+
+.dark-splash {
+  --background-default-color:  #072233ff;
+  --text-on-background-default-color: #e1e0dcff;
+  --primary-color: #7A5A4Bff;
+  --text-on-primary-color:#e1e0dcff;
+  --secondary-color: #7A5A4Bff;
+  --text-on-secondary-color: #e1e0dcff;
+  --content-border-color: black; 
+  --header-image: url(../images/headerImage-splash.jpg);
+}
+
+/* #88A4A9ff; */
+.plant {
+  --background-default-color:   white;
+  --text-on-background-default-color: #3B4D60ff;
+  --primary-color:  #88A4A9ff;
+  --text-on-primary-color:   #3B4D60ff;
+  --secondary-color:  #3B4D60ff;
+  --text-on-secondary-color: white;
+  --content-border-color: #3B4D60ff; 
+  --header-image: url(../images/headerImage-plant.jpg);
+}
+
+.dark-plant {
+  --background-default-color:  #3B4D60ff;
+  --text-on-background-default-color: #e1e0dcff;
+  --primary-color: #88A4A9ff;
+  --text-on-primary-color: #3B4D60ff;
+  --secondary-color: #88A4A9ff;
+  --text-on-secondary-color: #3B4D60ff;
+  --content-border-color: black; 
+  --header-image: url(../images/headerImage-plant.jpg);
 }
 
 /* .flashy {
@@ -45,23 +123,67 @@
   --text-on-secondary-color: #05f4b7;
 } */
 
-.rain-coats {
+.cafe-au-lait {
+  --background-default-color: #545264ff;
+  --text-on-background-default-color: #e1e0dcff;
+  --primary-color: #e1e0dcff;
+  --text-on-primary-color: #545264ff;
+  --secondary-color: #ba7f55ff;
+  --text-on-secondary-color: #e1e0dcff;
+  --content-border-color: black; 
+  --header-image: url(../images/headerImage-phone.jpg);
+}
+
+.cafe-au-lait2 {
+  --background-default-color: #545264ff;
+  --text-on-background-default-color: #e1e0dcff;
+  --primary-color: #ba7f55ff;
+  --text-on-primary-color: #e1e0dcff;
+  --secondary-color:  #e1e0dcff;
+  --text-on-secondary-color:  #545264ff;
+  --content-border-color: black; 
+  --header-image: url(../images/headerImage-phone.jpg);
+}
+
+.cafe-au-lait3 {
+  --background-default-color:  #e1e0dcff;
+  --text-on-background-default-color: #545264ff;
+  --primary-color: #545264ff;
+  --text-on-primary-color: #e1e0dcff;
+  --secondary-color:   #ba7f55ff;
+  --text-on-secondary-color:   #e1e0dcff;
+  --content-border-color: black; 
+  --header-image: url(../images/headerImage-phone.jpg);
+}
+
+.cafe-au-lait4 {
+  --background-default-color:  #e1e0dcff;
+  --text-on-background-default-color: #545264ff;
+  --primary-color: #ba7f55ff; 
+  --text-on-primary-color: #e1e0dcff;
+  --secondary-color:   #545264ff;
+  --text-on-secondary-color:   #e1e0dcff;
+  --content-border-color: black; 
+  --header-image: url(../images/headerImage-phone.jpg);
+}
+
+/* .rain-coats {
   --background-default-color: white;
   --text-on-background-default-color: #be2f29;
   --primary-color: #ecaf44;
   --text-on-primary-color: #0c1115;
   --secondary-color: #1a2c42;
   --text-on-secondary-color: #ecaf44;
-}
+} */
 
-.dark-rain-coats {
+/* .dark-rain-coats {
   --background-default-color: #0c1115;
   --text-on-background-default-color: #be2f29;
   --primary-color: #1a2c42;
   --text-on-primary-color: #ecaf44;
   --secondary-color: #1a2c42;
   --text-on-secondary-color: #ecaf44;
-}
+} */
 
 .sea-foam {
   --background-default-color: #f7f7f7;
@@ -70,6 +192,8 @@
   --text-on-primary-color: #f7f7f7;
   --secondary-color: #7da2a9;
   --text-on-secondary-color: #f7f7f7;
+  --content-border-color: black; 
+  --header-image: url(../images/headerImage-phone.jpg);
 }
 
 .dark-sea-foam {
@@ -79,15 +203,19 @@
   --text-on-primary-color: #7da2a9;
   --secondary-color:  #7da2a9; 
   --text-on-secondary-color: #f7f7f7;
+  --content-border-color: black; 
+  --header-image: url(../images/headerImage-phone.jpg);
 }
 
 .peach-trees {
   --background-default-color: #e6e2dd;
   --text-on-background-default-color: #373a36;
   --primary-color: #d48166;
-  --text-on-primary-color: #373a36;
+  --text-on-primary-color: #e6e2dd;
   --secondary-color: #373a36;
   --text-on-secondary-color:   #d48166;
+  --content-border-color: black; 
+  --header-image: url(../images/headerImage-phone.jpg);
 }
 
 .dark-peach-trees {
@@ -97,6 +225,8 @@
   --text-on-primary-color: #d48166;
   --secondary-color:   #d48166; 
   --text-on-secondary-color: #e6e2dd; 
+  --content-border-color: black; 
+  --header-image: url(../images/headerImage-phone.jpg);
 }
 
 /* Global styles
@@ -171,6 +301,7 @@ ul {
   padding: 5px;
   background-color: var(--background-default-color);
   color: var(--text-on-background-default-color);
+  border: solid thin var(--content-border-color);
   margin-bottom: 20px;
   margin-left: 20px;
 }
@@ -179,7 +310,7 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  padding-right: 53px;
+  padding-right: 90px;
   padding-bottom: 14px;
 ;
 }

@@ -49,13 +49,13 @@
     height: 2px;
     width: 0px;
     background: transparent;
-    transition: width 0.5s ease, background-color 0.5s ease;
+    transition: width 0.2s ease, background-color 0.2s ease;
   }
   
   /* animated line under menu item on focus */
   .pageMenu li a:hover:after {
     width: 33%;
-    background: var(--background-default-color);
+    background: var(--text-on-background-default-color);
   }
   
   .pageMenu .closeMenu {
@@ -98,8 +98,13 @@
     margin-right: auto;
     width: 100%;
     height: 660px;
-    object-fit: cover;
-    object-position: center;
+    /* object-fit: cover */
+    /* object-position: center; */
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-image: var(--header-image);
+
     /* transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
       rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     transform-style: preserve-3d;
@@ -112,8 +117,12 @@
     margin-right: auto;
     width: 100%;
     height: 660px;
-    object-fit: cover;
-    object-position: center;
+    /* object-fit: cover; */
+    /* object-position: center; */
+    /* background-position: center;
+    background-repeat: space;
+    background-image: var(--header-image); */
+
     /* transform: translate3d(0px, 0px, 0px) scale3d(1.05, 1.05, 1) rotateX(0deg)
       rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     transform-style: preserve-3d; */
@@ -167,6 +176,7 @@
     float: left;
     display: block;
     color: var(--text-on-background-default-color);
+    /* background-color: var(--background-default-color); */
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -175,8 +185,8 @@
   
   /* links in horizontal menu hover */
   .topnav a:hover {
-    background-color: var(--secondary-color);
-    color: var(--text-on-secondary-color);
+    background-color: var(--text-on-background-default-color);
+    color: var(--background-default-color);
   }
   
   /* hamburger is not displayed when not on responsive narrow screen */
@@ -193,14 +203,15 @@
       float: right;
       display: block;
       color: var(--text-on-background-default-color);
+      background-color: var(--background-default-color);
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
       font-size: 1em;
     }
     .topnav .hamburger:hover {
-      background-color: var(--secondary-color);
-      color: var(--text-on-secondary-color);
+      background-color: var(--text-on-background-default-color);
+      color: var(--background-default-color);
     }
   }
   
@@ -211,7 +222,7 @@
     z-index: 1;
     cursor: pointer;
     bottom: 30px;
-    right: 10px;
+    right: 30px;
   }
   
   .footerMenu #scrollToTopIcon {
@@ -238,6 +249,7 @@
     font-size: 1.5em;
     margin-left: 5%;
     margin-right: 15%;
+    padding: 35px;
     text-align: left;
     margin-top: 200px;
     max-width: 500px;

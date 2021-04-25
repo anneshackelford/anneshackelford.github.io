@@ -18,13 +18,22 @@ function ThemeSelector() {
         value={selectedTheme}
       >
         <option value="default">Default</option>
-        <option value="dark-theme">Dark Mode</option>
+        {/* <option value="dark-theme">Dark Mode</option> */}
+        <option value="splash">Splash</option>
+        <option value="splash-new">New Splash</option>
+        <option value="dark-splash-new">Dark New Splash</option>
+        {/* <option value="dark-splash">Dark Splash</option> */}
+        <option value="plant">Plant</option>
+        {/* <option value="dark-plant">Dark Plant</option> */}
+        {/* <option value="cafe-au-lait">Cafe au Lait</option> */}
+        {/* <option value="cafe-au-lait2">Double Cafe au Lait</option>         */}
+        {/* <option value="cafe-au-lait3">Triple Cafe au Lait</option> */}
+        {/* <option value="cafe-au-lait4">2 Double Cafes au Lait, please</option> */}
         <option value="sea-foam">Sea Foam</option>
-        <option value="dark-sea-foam">Dark Sea Foam</option>
-        <option value="peach-trees">Peach Trees</option>
-        <option value="dark-peach-trees">Dark Peach Trees</option>
-        <option value="rain-coats">Sailing</option>
-        <option value="dark-rain-coats">Dark Sailing</option>
+        {/* <option value="dark-sea-foam">Dark Sea Foam</option> */}
+        {/* <option value="peach-trees">Peach Trees</option> */}
+        {/* <option value="dark-peach-trees">Dark Peach Trees</option> */}
+
       </select>
     </div>
   );
